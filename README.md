@@ -2,7 +2,7 @@
 
 UI/UX mockups for Bank of the Philippine Islands (BPI) banking applications, created as part of an ideabank initiative to improve digital banking services and customer experience.
 
-## Mockups Overview
+## 📱 Mockups Overview
 
 This repository contains 5 comprehensive mockups designed to enhance BPI's digital ecosystem:
 
