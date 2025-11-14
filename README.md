@@ -2,7 +2,7 @@
 
 UI/UX mockups for Bank of the Philippine Islands (BPI) banking applications, created as part of an ideabank initiative to improve digital banking services and customer experience.
 
-## 📱 Mockups Overview
+## Mockups Overview
 
 This repository contains 5 comprehensive mockups designed to enhance BPI's digital ecosystem:
 
@@ -207,21 +207,11 @@ Potential improvements for all mockups:
 ## 👤 Author
 
 **Therese Segui**
-- Created as part of BPI ideabank initiative
+- Created during BPI internship (Internship Requirement)
+- Part of BPI ideabank initiative
 - [GitHub](https://github.com/theresesegui)
 
 ## 📄 License
 
 These mockups are prototypes for demonstration purposes. All BPI branding and intellectual property belong to Bank of the Philippine Islands.
 
-## 📞 Contact
-
-For questions or feedback about these mockups:
-- **BPI Customer Service**: (02) 889-10000
-- **Website**: [www.bpi.com.ph](https://www.bpi.com.ph)
-
----
-
-⭐ If you find these mockups helpful, consider starring this repository!
-
-**Built with ❤️ for BPI**
