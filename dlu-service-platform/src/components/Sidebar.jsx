@@ -183,7 +183,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <div style={styles.sidebar}>
+    <div style={styles.sidebar} data-sidebar>
       <div style={styles.content}>
         {/* Toggle Button */}
         <button
