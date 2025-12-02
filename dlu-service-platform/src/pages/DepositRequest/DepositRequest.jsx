@@ -14,6 +14,200 @@ const DepositRequest = () => {
     notes: '',
   });
 
+  const styles = {
+    container: {
+      display: 'flex',
+      minHeight: '100vh',
+      backgroundColor: '#f9fafb',
+    },
+    mainContent: {
+      flex: 1,
+      marginLeft: '256px',
+    },
+    header: {
+      backgroundColor: '#dc2626',
+      color: '#ffffff',
+      position: 'sticky',
+      top: 0,
+      zIndex: 10,
+      boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+    },
+    headerContent: {
+      padding: '1rem 1.5rem',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'space-between',
+    },
+    headerLeft: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.75rem',
+    },
+    bpiBadge: {
+      backgroundColor: '#ffffff',
+      color: '#dc2626',
+      padding: '0.25rem 0.75rem',
+      borderRadius: '0.25rem',
+      fontWeight: 'bold',
+    },
+    bpiText: {
+      fontWeight: '600',
+      fontSize: '1.125rem',
+    },
+    bpiSubtext: {
+      fontSize: '0.875rem',
+      color: '#fecaca',
+    },
+    headerRight: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '1.5rem',
+    },
+    headerButton: {
+      color: '#ffffff',
+      background: 'none',
+      border: 'none',
+      cursor: 'pointer',
+      fontSize: '0.875rem',
+    },
+    main: {
+      padding: '1.5rem',
+    },
+    formContainer: {
+      maxWidth: '1024px',
+      margin: '0 auto',
+    },
+    formCard: {
+      backgroundColor: '#ffffff',
+      borderRadius: '0.5rem',
+      boxShadow: '0 4px 6px rgba(0,0,0,0.1)',
+      padding: '2rem',
+    },
+    formTitle: {
+      fontSize: '1.5rem',
+      fontWeight: 'bold',
+      color: '#111827',
+      marginBottom: '0.5rem',
+    },
+    formSubtitle: {
+      color: '#6b7280',
+      marginBottom: '2rem',
+    },
+    section: {
+      marginBottom: '2rem',
+    },
+    sectionTitle: {
+      fontSize: '1.125rem',
+      fontWeight: '600',
+      color: '#111827',
+      marginBottom: '1rem',
+    },
+    inputGroup: {
+      marginBottom: '1rem',
+    },
+    label: {
+      display: 'block',
+      fontSize: '0.875rem',
+      fontWeight: '600',
+      color: '#374151',
+      marginBottom: '0.5rem',
+    },
+    required: {
+      color: '#dc2626',
+    },
+    input: {
+      width: '100%',
+      padding: '0.5rem 1rem',
+      border: '1px solid #d1d5db',
+      borderRadius: '0.5rem',
+      fontSize: '0.875rem',
+      outline: 'none',
+    },
+    select: {
+      width: '100%',
+      padding: '0.5rem 1rem',
+      border: '1px solid #d1d5db',
+      borderRadius: '0.5rem',
+      fontSize: '0.875rem',
+      outline: 'none',
+      backgroundColor: '#ffffff',
+    },
+    textarea: {
+      width: '100%',
+      padding: '0.5rem 1rem',
+      border: '1px solid #d1d5db',
+      borderRadius: '0.5rem',
+      fontSize: '0.875rem',
+      outline: 'none',
+      resize: 'vertical',
+    },
+    gridTwo: {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr',
+      gap: '1rem',
+    },
+    uploadArea: {
+      border: '2px dashed #d1d5db',
+      borderRadius: '0.5rem',
+      padding: '2rem',
+      textAlign: 'center',
+      backgroundColor: '#fafafa',
+    },
+    uploadIcon: {
+      width: '3rem',
+      height: '3rem',
+      color: '#9ca3af',
+      margin: '0 auto 1rem',
+    },
+    uploadText: {
+      color: '#6b7280',
+      marginBottom: '1rem',
+      fontSize: '0.875rem',
+    },
+    uploadButton: {
+      backgroundColor: '#ffffff',
+      color: '#374151',
+      padding: '0.5rem 1.5rem',
+      borderRadius: '0.5rem',
+      border: '2px solid #d1d5db',
+      cursor: 'pointer',
+      fontWeight: '500',
+      fontSize: '0.875rem',
+    },
+    buttonGroup: {
+      display: 'flex',
+      gap: '1rem',
+    },
+    submitButton: {
+      flex: 1,
+      backgroundColor: '#dc2626',
+      color: '#ffffff',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '0.5rem',
+      border: 'none',
+      cursor: 'pointer',
+      fontWeight: '600',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      gap: '0.5rem',
+      fontSize: '0.875rem',
+    },
+    draftButton: {
+      backgroundColor: '#ffffff',
+      color: '#374151',
+      padding: '0.75rem 1.5rem',
+      borderRadius: '0.5rem',
+      border: '2px solid #d1d5db',
+      cursor: 'pointer',
+      fontWeight: '600',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '0.5rem',
+      fontSize: '0.875rem',
+    },
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Deposit request submitted successfully!');
@@ -21,62 +215,58 @@ const DepositRequest = () => {
   };
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div style={styles.container}>
       <Sidebar />
       
-      <div className="flex-1 ml-64">
+      <div style={styles.mainContent}>
         {/* Header */}
-        <header className="bg-red-600 text-white sticky top-0 z-10">
-          <div className="px-6 py-4 flex items-center justify-between">
-            <div className="flex items-center gap-3">
-              <div className="bg-white text-red-600 px-3 py-1 rounded font-bold">
-                BPI
-              </div>
+        <header style={styles.header}>
+          <div style={styles.headerContent}>
+            <div style={styles.headerLeft}>
+              <div style={styles.bpiBadge}>BPI</div>
               <div>
-                <h1 className="font-semibold text-lg">Bank of the Philippine Islands</h1>
-                <p className="text-sm text-red-100">Corporate Service Portal</p>
+                <div style={styles.bpiText}>Bank of the Philippine Islands</div>
+                <div style={styles.bpiSubtext}>Corporate Service Portal</div>
               </div>
             </div>
-            <div className="flex items-center gap-6">
-              <button className="text-white hover:text-red-100">Service Portal</button>
-              <button className="text-white hover:text-red-100">Track Requests</button>
-              <button className="text-white hover:text-red-100">Complaints</button>
-              <button className="text-white hover:text-red-100">Admin</button>
-              <button className="flex items-center gap-2 text-white hover:text-red-100">
-                <span>👤</span>
-                <span>Profile</span>
+            <div style={styles.headerRight}>
+              <button style={styles.headerButton}>Service Portal</button>
+              <button style={styles.headerButton}>Track Requests</button>
+              <button style={styles.headerButton}>Complaints</button>
+              <button style={styles.headerButton}>Admin</button>
+              <button style={styles.headerButton}>
+                👤 Profile
               </button>
               <button 
                 onClick={() => navigate('/')}
-                className="flex items-center gap-2 text-white hover:text-red-100"
+                style={styles.headerButton}
               >
-                <span>🚪</span>
-                <span>Logout</span>
+                🚪 Logout
               </button>
             </div>
           </div>
         </header>
 
         {/* Main Content */}
-        <main className="p-6">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg p-8">
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">Deposit Request Form</h2>
-              <p className="text-gray-600 mb-8">Submit a new deposit request for processing</p>
+        <main style={styles.main}>
+          <div style={styles.formContainer}>
+            <div style={styles.formCard}>
+              <h2 style={styles.formTitle}>Deposit Request Form</h2>
+              <p style={styles.formSubtitle}>Submit a new deposit request for processing</p>
 
               <form onSubmit={handleSubmit}>
                 {/* Client Information */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Client Information</h3>
-                  <div className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Client Name <span className="text-red-600">*</span>
+                <div style={styles.section}>
+                  <h3 style={styles.sectionTitle}>Client Information</h3>
+                  <div style={styles.inputGroup}>
+                    <label style={styles.label}>
+                      Client Name <span style={styles.required}>*</span>
                     </label>
                     <select
                       required
                       value={formData.clientName}
                       onChange={(e) => setFormData({ ...formData, clientName: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      style={styles.select}
                     >
                       <option value="">Select client</option>
                       <option value="SM Investments">SM Investments Corporation</option>
@@ -87,12 +277,12 @@ const DepositRequest = () => {
                 </div>
 
                 {/* Deposit Details */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Deposit Details</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Amount (PHP) <span className="text-red-600">*</span>
+                <div style={styles.section}>
+                  <h3 style={styles.sectionTitle}>Deposit Details</h3>
+                  <div style={styles.gridTwo}>
+                    <div style={styles.inputGroup}>
+                      <label style={styles.label}>
+                        Amount (PHP) <span style={styles.required}>*</span>
                       </label>
                       <input
                         type="number"
@@ -100,18 +290,18 @@ const DepositRequest = () => {
                         placeholder="0.00"
                         value={formData.amount}
                         onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                        style={styles.input}
                       />
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Deposit Type <span className="text-red-600">*</span>
+                    <div style={styles.inputGroup}>
+                      <label style={styles.label}>
+                        Deposit Type <span style={styles.required}>*</span>
                       </label>
                       <select
                         required
                         value={formData.depositType}
                         onChange={(e) => setFormData({ ...formData, depositType: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                        style={styles.select}
                       >
                         <option value="">Select type</option>
                         <option value="Cash">Cash Deposit</option>
@@ -123,18 +313,18 @@ const DepositRequest = () => {
                 </div>
 
                 {/* Pickup Schedule */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Pickup Schedule</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Pickup Branch <span className="text-red-600">*</span>
+                <div style={styles.section}>
+                  <h3 style={styles.sectionTitle}>Pickup Schedule</h3>
+                  <div style={styles.gridTwo}>
+                    <div style={styles.inputGroup}>
+                      <label style={styles.label}>
+                        Pickup Branch <span style={styles.required}>*</span>
                       </label>
                       <select
                         required
                         value={formData.branch}
                         onChange={(e) => setFormData({ ...formData, branch: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                        style={styles.select}
                       >
                         <option value="">Select branch</option>
                         <option value="Makati">Makati Main Branch</option>
@@ -142,80 +332,75 @@ const DepositRequest = () => {
                         <option value="Ortigas">Ortigas Center Branch</option>
                       </select>
                     </div>
-                    <div>
-                      <label className="block text-sm font-semibold text-gray-700 mb-2">
-                        Preferred Date <span className="text-red-600">*</span>
+                    <div style={styles.inputGroup}>
+                      <label style={styles.label}>
+                        Preferred Date <span style={styles.required}>*</span>
                       </label>
                       <input
                         type="date"
                         required
                         value={formData.preferredDate}
                         onChange={(e) => setFormData({ ...formData, preferredDate: e.target.value })}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                        style={styles.input}
                       />
                     </div>
                   </div>
-                  <div className="mb-4">
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Preferred Time <span className="text-red-600">*</span>
+                  <div style={styles.inputGroup}>
+                    <label style={styles.label}>
+                      Preferred Time <span style={styles.required}>*</span>
                     </label>
                     <input
                       type="time"
                       required
                       value={formData.preferredTime}
                       onChange={(e) => setFormData({ ...formData, preferredTime: e.target.value })}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
+                      style={styles.input}
                     />
                   </div>
                 </div>
 
                 {/* Supporting Documents */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Supporting Documents</h3>
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center">
-                    <div className="mb-4">
-                      <svg className="w-12 h-12 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div style={styles.section}>
+                  <h3 style={styles.sectionTitle}>Supporting Documents</h3>
+                  <div style={styles.inputGroup}>
+                    <label style={styles.label}>Upload Documents</label>
+                    <div style={styles.uploadArea}>
+                      <svg style={styles.uploadIcon} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
                       </svg>
-                      <p className="text-gray-600">Drag and drop files here, or click to browse</p>
+                      <p style={styles.uploadText}>Drag and drop files here, or click to browse</p>
+                      <button
+                        type="button"
+                        style={styles.uploadButton}
+                      >
+                        Select Files
+                      </button>
                     </div>
-                    <button
-                      type="button"
-                      className="bg-white text-gray-700 px-6 py-2 rounded-lg border-2 border-gray-300 hover:bg-gray-50 font-medium"
-                    >
-                      Select Files
-                    </button>
                   </div>
                 </div>
 
                 {/* Additional Notes */}
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-4">Additional Notes</h3>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">
-                    Notes (Optional)
-                  </label>
-                  <textarea
-                    rows={4}
-                    placeholder="Add any additional information or special instructions"
-                    value={formData.notes}
-                    onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
-                  />
+                <div style={styles.section}>
+                  <h3 style={styles.sectionTitle}>Additional Notes</h3>
+                  <div style={styles.inputGroup}>
+                    <label style={styles.label}>Notes (Optional)</label>
+                    <textarea
+                      rows={4}
+                      placeholder="Add any additional information or special instructions"
+                      value={formData.notes}
+                      onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
+                      style={styles.textarea}
+                    />
+                  </div>
                 </div>
 
                 {/* Actions */}
-                <div className="flex gap-4">
-                  <button
-                    type="submit"
-                    className="flex-1 bg-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center justify-center gap-2"
-                  >
+                <div style={styles.buttonGroup}>
+                  <button type="submit" style={styles.submitButton}>
                     <span>📥</span>
                     <span>Submit Request</span>
                   </button>
-                  <button
-                    type="button"
-                    className="bg-white text-gray-700 px-6 py-3 rounded-lg border-2 border-gray-300 hover:bg-gray-50 font-semibold flex items-center gap-2"
-                  >
+                  <button type="button" style={styles.draftButton}>
                     <span>💾</span>
                     <span>Save as Draft</span>
                   </button>
