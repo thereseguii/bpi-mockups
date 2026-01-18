@@ -1,18 +1,26 @@
+import { useState } from 'react'
 import './App.css'
+import LandingPage from './pages/LandingPage/LandingPage'
+import CheckInForm from './pages/CheckInForm/CheckInForm'
 
 function App() {
+  const [currentPage, setCurrentPage] = useState('landing')
+  const [checkInType, setCheckInType] = useState(null)
+
+  const handleCheckIn = (type) => {
+    setCheckInType(type)
+    setCurrentPage('checkin')
+  }
+
+  const handleBack = () => {
+    setCurrentPage('landing')
+    setCheckInType(null)
+  }
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      <header className="bg-white shadow">
-        <div className="max-w-7xl mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-gray-900">Visitor Management System</h1>
-        </div>
-      </header>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow p-6">
-          <p className="text-gray-600">Welcome to the Visitor Management System</p>
-        </div>
-      </main>
+    <div>
+      {currentPage === 'landing' && <LandingPage onCheckIn={handleCheckIn} />}
+      {currentPage === 'checkin' && <CheckInForm type={checkInType} onBack={handleBack} />}
     </div>
   )
 }
